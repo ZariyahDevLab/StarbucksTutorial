@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="SBstyle.css"/>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="https://i.ibb.co/Qbn1QKF/sblogo.png" alt="sblogo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a> </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet,Nullam at diam vitae elit consectetur dapibus id quis enim. Donec
+                    hendrerit tellus interdum, ullamcorper neque a, accumsan elit. </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="https://i.ibb.co/W51JFnt/sbimg1.png" alt="sbimg1" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="https://i.ibb.co/R0tJp5r/sbthumb1.png" alt="sbthumb1" onclick="imgSlider('https://i.ibb.co/W51JFnt/sbimg1.png');changeCircleColor('#017143') "></li>
+            <li><img src="https://i.ibb.co/dtGfSjK/sbthumb2.png" alt="sbthumb2" onclick="imgSlider('https://i.ibb.co/1Z3JWx4/sbimg2.png');changeCircleColor('#eb7495') "></li>
+            <li><img src="https://i.ibb.co/VY7tCcP/sbthumb3.png" alt="sbthumb3" onclick="imgSlider('https://i.ibb.co/0DP2LJC/sbimg3.png');changeCircleColor('#d752b1') "></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="https://i.ibb.co/41HYyWx/sbfacebook.png" alt="sbfacebook"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/bd9d8rF/sbtwitter.png" alt="sbtwitter"></li>
+            <li><a href="#"><img src="https://i.ibb.co/hyjRtYR/sbinstagram.png" alt="sbinstagram"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menutoggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
